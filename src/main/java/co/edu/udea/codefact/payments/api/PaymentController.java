@@ -40,7 +40,7 @@ public class PaymentController {
           createPaymentRequest.getCardCvc()
         );
     if (!optional.isPresent()) {
-      return ResponseEntity.badRequest().build();
+      return ResponseEntity.notFound().build();
     }
     final var rand = new Random();
     final var amount = rand.nextInt(5000000 - 1000000 + 1) + 1000000;

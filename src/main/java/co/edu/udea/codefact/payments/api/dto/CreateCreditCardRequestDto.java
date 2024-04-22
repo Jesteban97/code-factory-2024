@@ -11,9 +11,17 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PaymentResponseDto {
+public class CreateCreditCardRequestDto {
 
-  private Long id;
+  private String number;
 
-  private String name;
+  private int expirationMonth;
+
+  private int expirationYear;
+
+  private String holderName;
+
+  private int cvc;
+
+  private double balance;
 }

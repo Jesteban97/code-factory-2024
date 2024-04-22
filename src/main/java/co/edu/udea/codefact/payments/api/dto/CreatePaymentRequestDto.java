@@ -2,7 +2,6 @@ package co.edu.udea.codefact.payments.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,5 +13,11 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CreatePaymentRequestDto {
 
-  private String name;
+  private Long reservationId;
+
+  private String cardNumber;
+
+  private int cardCvc;
+
+  private String cardHolderName;
 }
